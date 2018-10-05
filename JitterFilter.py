@@ -79,8 +79,8 @@ def calculate_new_represented_orientation():
     print(combined_estimation_vector)
     combined_representation_vector = x_axis_represented + y_axis_represented + z_axis_represented
     print(combined_representation_vector)
-    angle_between_vectors =  math.acos(combined_estimation_vector.dot(combined_representation_vector))  # Be aware, having unit vectors has simplified this, also not using unit vectors most likely makes an error, as acos not defined for everything
-    print(angle_between_vectors)
+    angle_between_vectors =  math.acos(combined_estimation_vector.dot(combined_representation_vector)*0.333)  # Be aware, having unit vectors has simplified this, also not using unit vectors most likely makes an error, as acos not defined for everything
+    print(angle_between_vectors)                                                                              # Divide by 3 because the vectors being compared have magnitude root 3
     
     # only move the represented orientation if a lower threshold is breached, and the high threshold is not breached
     #if angle_between_vectors > lower_angle_threshold and angle_between_vectors < high_angle_threshold:
